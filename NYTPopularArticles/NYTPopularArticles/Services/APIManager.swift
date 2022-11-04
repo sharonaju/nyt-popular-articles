@@ -36,7 +36,7 @@ class APIManager: NSObject {
                     let result = try JSONDecoder().decode(T.self, from: data)
                     handler(.success(result))
                 } catch {
-                    
+                    print(error)
                 }
             case .failure(let error):
                 if let errorInfo = (self.parseApiError(data: response.data, error: error, endPoint: type)) {
@@ -51,7 +51,7 @@ class APIManager: NSObject {
         
     }
 
-    private func parseApiError(data: Data?, error: AFError? = nil, endPoint: EndPointType? = nil) -> ErrorInfo? {
+    func parseApiError(data: Data? = nil, error: AFError? = nil, endPoint: EndPointType? = nil) -> ErrorInfo? {
         let decoder = JSONDecoder()
         if let jsonData = data, let error = try? decoder.decode(ErrorResponse.self, from: jsonData) {
             let errorInfo = ErrorInfo(body: error.message ?? "")

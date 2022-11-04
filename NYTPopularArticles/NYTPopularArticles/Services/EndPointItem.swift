@@ -9,8 +9,7 @@ import Foundation
 import Alamofire
 
 enum EndPointItem {
-    
-    case viewed
+    case viewed(_: Int)
 }
 
 extension EndPointItem: EndPointType{
@@ -24,7 +23,10 @@ extension EndPointItem: EndPointType{
     }
     
     var path: String {
-        return "viewed"
+        switch self {
+        case .viewed(let numberOfDays):
+            return "viewed/\(numberOfDays).json"
+        }
     }
     
     var httpMethod: HTTPMethod {
@@ -38,11 +40,12 @@ extension EndPointItem: EndPointType{
             return "v2/"
     }
     var url: URL {
-        return URL(string: self.baseURL + self.path + self.version)!
+        return URL(string: self.baseURL + self.version + self.path)!
     }
     
     var encoding: ParameterEncoding {
-        return JSONEncoding.default
+        return URLEncoding.default
     }
+
 }
 
