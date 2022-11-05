@@ -16,8 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8t6-2d-Pzl">
+                                <rect key="frame" x="14" y="117" width="365" height="32"/>
+                                <segments>
+                                    <segment title="1 Day"/>
+                                    <segment title="7 Days"/>
+                                    <segment title="30 Days"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="W3I-vK-AIX"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YvE-fZ-cRR">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="fK9-XZ-XHw"/>
@@ -28,14 +39,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8t6-2d-Pzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="Jsh-O2-Hvc"/>
+                            <constraint firstItem="YvE-fZ-cRR" firstAttribute="top" secondItem="8t6-2d-Pzl" secondAttribute="bottom" constant="14" id="MsB-mi-xeQ"/>
                             <constraint firstItem="YvE-fZ-cRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V0X-us-Cxq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8t6-2d-Pzl" secondAttribute="trailing" constant="14" id="V15-yU-gOg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YvE-fZ-cRR" secondAttribute="trailing" id="dvU-DO-w25"/>
-                            <constraint firstItem="YvE-fZ-cRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="siK-jY-RxZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YvE-fZ-cRR" secondAttribute="bottom" id="vBY-zC-n6r"/>
+                            <constraint firstItem="8t6-2d-Pzl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="y1S-CM-THL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p0n-o3-fNk"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="8t6-2d-Pzl" id="gkd-In-PW1"/>
                         <outlet property="tableView" destination="YvE-fZ-cRR" id="Y9B-3c-aeE"/>
                     </connections>
                 </viewController>

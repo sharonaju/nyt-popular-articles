@@ -30,7 +30,7 @@ class ArticleListInteractor: ArticleListBusinessLogic, ArticleListDataStore
     
     // MARK: Fetch Articles
     func fetchArticles(numberOfDays: Int, completion: @escaping (Result<[Article]?, ErrorInfo>) -> ()) {
-        worker.fetchArticles(numberOfDays: 1, completion: { result in
+        worker.fetchArticles(numberOfDays: numberOfDays, completion: { result in
             switch result {
             case .success(let data):
                 self.articles = data

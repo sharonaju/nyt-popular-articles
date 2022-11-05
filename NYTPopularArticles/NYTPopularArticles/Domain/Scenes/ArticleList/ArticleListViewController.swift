@@ -23,6 +23,7 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
     var router: (NSObjectProtocol & ArticleListRoutingLogic & ArticleListDataPassing)?
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
     var articles: [Article]?
     
     
@@ -73,19 +74,43 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        prepareNavigationBar()
+        prepareSegmentControl()
         prepareTableView()
-        loadArticles()
+        loadArticles(numberOfDays: 1)
+        
+        UIFont.familyNames.forEach({ familyName in
+                    let fontNames = UIFont.fontNames(forFamilyName: familyName)
+                    print(familyName, fontNames)
+                })
     }
     
-    // MARK: Do something
+    // MARK: Prepare UI
       
     func prepareTableView()  {
         tableView.register(UINib(nibName: "ArticleListTableViewCell", bundle: nil), forCellReuseIdentifier: ArticleListTableViewCell.reuseIdentifier)
         tableView.estimatedRowHeight = 150
     }
-    func loadArticles()
+    
+    func prepareNavigationBar() {
+        self.title = "NY Times Most Popular"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .black
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont(name: "TimesNewRomanPS-BoldMT", size: 36)!]
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+    }
+    
+    func prepareSegmentControl() {
+        let font = UIFont(name: "TimesNewRomanPSMT", size: 14)!
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+    }
+    func loadArticles(numberOfDays: Int)
     {
-        interactor?.fetchArticles(numberOfDays: 1, completion: { result in
+        interactor?.fetchArticles(numberOfDays: numberOfDays, completion: { result in
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
@@ -96,6 +121,20 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
             }
         })
 
+    }
+    
+    @IBAction func indexChanged(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            loadArticles(numberOfDays: 1)
+        case 1:
+            loadArticles(numberOfDays: 7)
+        case 2:
+            loadArticles(numberOfDays: 30)
+        default:
+            break
+        }
     }
     
     func displayArticleList(viewModel: ArticleList.FetchArticleList.ViewModel)

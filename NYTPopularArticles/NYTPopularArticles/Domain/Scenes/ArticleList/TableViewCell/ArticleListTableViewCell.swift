@@ -12,6 +12,8 @@ class ArticleListTableViewCell: UITableViewCell {
 
     @IBOutlet var thumbnailImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     //MARK: Properties
     static let reuseIdentifier = "ArticleListTableViewCellID"
@@ -38,6 +40,8 @@ class ArticleListTableViewCell: UITableViewCell {
         if let imageURL = URL(string: mediaMetaData?.first?.url ?? "") {
             thumbnailImageView.sd_setImage(with: imageURL)
         }
+        descriptionLabel.text = data?.abstract ?? ""
+        dateLabel.text = data?.updated ?? ""
         
     }
     
