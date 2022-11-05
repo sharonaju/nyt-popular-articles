@@ -24,11 +24,11 @@ final class APIManagerTest: XCTestCase {
     }
     
     func testCallAPISuccess() {
-        var response: ArticleResponse?
+        var response: ArticleNetworkModel?
         var errResponse: ErrorInfo?
         let params = ["api-key" : nytAPIKey]
         let expectation = self.expectation(description: "API fetched")
-        APIManager.shared().call(type: EndPointItem.viewed(1), params: params) { (result: Swift.Result<ArticleResponse, ErrorInfo>) in
+        APIManager.shared().call(type: EndPointItem.viewed(1), params: params) { (result: Swift.Result<ArticleNetworkModel, ErrorInfo>) in
             switch result {
             case .success(let data):
                 response = data
@@ -44,11 +44,11 @@ final class APIManagerTest: XCTestCase {
     }
     
     func testCallAPIFailure() {
-        var response: ArticleResponse?
+        var response: ArticleNetworkModel?
         var errResponse: ErrorInfo?
         let params = ["api-key" : "abc"]
         let expectation = self.expectation(description: "API fetched")
-        APIManager.shared().call(type: EndPointItem.viewed(1), params: params) { (result: Swift.Result<ArticleResponse, ErrorInfo>) in
+        APIManager.shared().call(type: EndPointItem.viewed(1), params: params) { (result: Swift.Result<ArticleNetworkModel, ErrorInfo>) in
             switch result {
             case .success(let data):
                 response = data
@@ -66,7 +66,6 @@ final class APIManagerTest: XCTestCase {
     func testErrorParseWhenNoData() {
         let errorInfo = APIManager.shared().parseApiError()
         XCTAssertNil(errorInfo)
-        
     }
 
 }

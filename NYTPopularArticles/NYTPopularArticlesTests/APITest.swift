@@ -22,7 +22,7 @@ final class APITest: XCTestCase {
         XCTAssertNotNil(apiManager)
     }
     func testFetchArticlesSuccess() {
-        var response: ArticleResponse?
+        var response: [Article]?
         var errorInfo: ErrorInfo?
         let expectation = self.expectation(description: "API fetched")
         API.shared.fetchArticles(numberOfDays: 1) { result in
@@ -42,7 +42,7 @@ final class APITest: XCTestCase {
     }
 
     func testFetchArticlesFailure() {
-        var response: ArticleResponse?
+        var response: [Article]?
         var errorInfo: ErrorInfo?
         let expectation = self.expectation(description: "API fetched")
         API.shared.fetchArticles(numberOfDays: -1) { result in

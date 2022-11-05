@@ -3,4 +3,212 @@
    uuid = "01655778-71CF-43C4-9C0F-83EB6CF3507D"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00FAFA2F-BB6D-41C8-BBDB-E5B32EA48C5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYTPopularArticlesTests/APITest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "testFetchArticlesFailure()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "00FAFA2F-BB6D-41C8-BBDB-E5B32EA48C5F - 448d2582318ff8f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "450">
+               </Location>
+               <Location
+                  uuid = "00FAFA2F-BB6D-41C8-BBDB-E5B32EA48C5F - 8b20fd15bc9c9c76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;NYTPopularArticles.ArticleResponse, NYTPopularArticles.ErrorInfo&gt;) -&gt; () in NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "00FAFA2F-BB6D-41C8-BBDB-E5B32EA48C5F - 448d2582318ff8f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "402">
+               </Location>
+               <Location
+                  uuid = "00FAFA2F-BB6D-41C8-BBDB-E5B32EA48C5F - ce59e3ba2acb121d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.Array&lt;NYTPopularArticles.Article&gt;&gt;, NYTPopularArticles.ErrorInfo&gt;) -&gt; () in NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "000B8734-EC9B-4676-8DDA-81475BCF9EC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYTPopularArticlesTests/APITest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "testFetchArticlesFailure()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "000B8734-EC9B-4676-8DDA-81475BCF9EC7 - 8b20fd15bc9c9c30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;NYTPopularArticles.ArticleResponse, NYTPopularArticles.ErrorInfo&gt;) -&gt; () in NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "000B8734-EC9B-4676-8DDA-81475BCF9EC7 - ce59e3ba2acb125b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.Array&lt;NYTPopularArticles.Article&gt;&gt;, NYTPopularArticles.ErrorInfo&gt;) -&gt; () in NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "251">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "249F7AE3-EED2-4BE2-9446-C53E371636AA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYTPopularArticlesTests/APITest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "testFetchArticlesFailure()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "249F7AE3-EED2-4BE2-9446-C53E371636AA - 8b20fd15bc9c9d93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;NYTPopularArticles.ArticleResponse, NYTPopularArticles.ErrorInfo&gt;) -&gt; () in NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "744">
+               </Location>
+               <Location
+                  uuid = "249F7AE3-EED2-4BE2-9446-C53E371636AA - ce59e3ba2acb13f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.Array&lt;NYTPopularArticles.Article&gt;&gt;, NYTPopularArticles.ErrorInfo&gt;) -&gt; () in NYTPopularArticlesTests.APITest.testFetchArticlesFailure() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/APITest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "488">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB4D5643-0863-4CC3-9601-AE3A30A9BB05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYTPopularArticles/Domain/Scenes/ArticleList/ArticleListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "setup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88AF3FD4-3AA4-440F-A816-C98C93FA573A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYTPopularArticles/Domain/Scenes/ArticleList/ArticleListPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "presentArticleList(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
