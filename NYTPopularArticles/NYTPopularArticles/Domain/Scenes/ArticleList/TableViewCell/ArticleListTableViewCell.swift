@@ -46,7 +46,7 @@ class ArticleListTableViewCell: UITableViewCell {
     }
     
     func prepareCell() {
-        thumbnailImageView.layer.cornerRadius = thumbnailImageView.frame.size.height/2
+        thumbnailImageView.layer.cornerRadius = 5 //thumbnailImageView.frame.size.height/2
         thumbnailImageView.backgroundColor = UIColor.gray
     }
 }

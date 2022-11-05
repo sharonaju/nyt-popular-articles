@@ -9,6 +9,7 @@ target 'NYTPopularArticles' do
   
     pod 'Alamofire'
     pod 'SDWebImage', '~> 5.0'
+    pod 'SkeletonView'
 
   target 'NYTPopularArticlesTests' do
     inherit! :search_paths

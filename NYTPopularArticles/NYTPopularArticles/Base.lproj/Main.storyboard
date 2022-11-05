@@ -23,6 +23,13 @@
                                     <segment title="7 Days"/>
                                     <segment title="30 Days"/>
                                 </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="W3I-vK-AIX"/>
                                 </connections>
@@ -30,6 +37,12 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YvE-fZ-cRR">
                                 <rect key="frame" x="0.0" y="162" width="393" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="fK9-XZ-XHw"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gvP-tl-5eu"/>
@@ -57,6 +70,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="bZc-JW-yrf">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetailViewControllerID" id="VlL-Od-RGN" customClass="ArticleDetailViewController" customModule="NYTPopularArticles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVX-4a-SZE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1pN-Wp-jvB">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VlL-Od-RGN" id="PQ0-B9-HyK"/>
+                                    <outlet property="delegate" destination="VlL-Od-RGN" id="KW9-cd-dfP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="krz-rW-Odr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="krz-rW-Odr" firstAttribute="trailing" secondItem="1pN-Wp-jvB" secondAttribute="trailing" id="TBX-IW-aoS"/>
+                            <constraint firstItem="1pN-Wp-jvB" firstAttribute="leading" secondItem="krz-rW-Odr" secondAttribute="leading" id="hz3-PY-Ir2"/>
+                            <constraint firstItem="krz-rW-Odr" firstAttribute="bottom" secondItem="1pN-Wp-jvB" secondAttribute="bottom" id="iRK-6f-Mhf"/>
+                            <constraint firstItem="1pN-Wp-jvB" firstAttribute="top" secondItem="krz-rW-Odr" secondAttribute="top" id="uB1-Td-8Ha"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1pN-Wp-jvB" id="xj1-Ur-gOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbO-B8-5RD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5uP-Bh-dJJ">

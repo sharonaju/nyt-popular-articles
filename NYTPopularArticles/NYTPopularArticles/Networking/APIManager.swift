@@ -24,7 +24,6 @@ class APIManager: NSObject {
     }
     
     func call<T>(type: EndPointType, params: Parameters? = nil, handler: @escaping (Swift.Result<T, ErrorInfo>) -> Void) where T: Codable {
-        print("params == \(type.url)")
         self.sessionManager.request(type.url,
                                     method: type.httpMethod,
                                     parameters: params,

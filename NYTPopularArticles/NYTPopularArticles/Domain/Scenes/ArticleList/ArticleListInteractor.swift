@@ -14,20 +14,24 @@ import UIKit
 
 protocol ArticleListBusinessLogic
 {
+    func getSelectedArticle(_ selectedArticle: Article?)
     func fetchArticles(numberOfDays: Int, completion: @escaping (Result<[Article]?, ErrorInfo>)->())
 }
 
 protocol ArticleListDataStore
 {
-  //var name: String { get set }
+    var articles: [Article]? { get set }
+    var article: Article? { get set }
 }
 
 class ArticleListInteractor: ArticleListBusinessLogic, ArticleListDataStore
 {
+
     var presenter: ArticleListPresentationLogic?
-    var worker = API.shared
+    var worker = ArticleListWorker()
     var articles: [Article]?
-    
+    var article: Article?
+        
     // MARK: Fetch Articles
     func fetchArticles(numberOfDays: Int, completion: @escaping (Result<[Article]?, ErrorInfo>) -> ()) {
         worker.fetchArticles(numberOfDays: numberOfDays, completion: { result in
@@ -44,5 +48,10 @@ class ArticleListInteractor: ArticleListBusinessLogic, ArticleListDataStore
         
         
     }
+    
+    func getSelectedArticle(_ selectedArticle: Article?) {
+        article = selectedArticle
+    }
+    
 
 }

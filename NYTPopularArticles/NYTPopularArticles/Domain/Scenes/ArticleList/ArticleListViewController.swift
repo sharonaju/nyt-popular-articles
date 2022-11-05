@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 protocol ArticleListDisplayLogic: AnyObject
 {
@@ -78,11 +79,6 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
         prepareSegmentControl()
         prepareTableView()
         loadArticles(numberOfDays: 1)
-        
-        UIFont.familyNames.forEach({ familyName in
-                    let fontNames = UIFont.fontNames(forFamilyName: familyName)
-                    print(familyName, fontNames)
-                })
     }
     
     // MARK: Prepare UI
@@ -110,15 +106,10 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
     }
     func loadArticles(numberOfDays: Int)
     {
+        self.tableView.showAnimatedGradientSkeleton()
         interactor?.fetchArticles(numberOfDays: numberOfDays, completion: { result in
-            switch result {
-            case .success(_):
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            case .failure(let error):
-                print(error)
-            }
+            self.tableView.hideSkeleton()
+            
         })
 
     }
@@ -167,5 +158,24 @@ extension ArticleListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            interactor?.getSelectedArticle(articles?[indexPath.row])
+            router?.routeToArticleDetail(segue: nil)
+        
+    }
+}
+
+// MARK: SkeletonTableViewDataSource
+
+extension ArticleListViewController: SkeletonTableViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return ArticleListTableViewCell.reuseIdentifier
+    }
+
 }
 
