@@ -1,5 +1,5 @@
 //
-//  APITest.swift
+//  APIManagerTest.swift
 //  NYTPopularArticlesTests
 //
 //  Created by Sharon Varghese on 05/11/2022.
@@ -8,8 +8,8 @@
 import XCTest
 @testable import NYTPopularArticles
 
-final class APITest: XCTestCase {
-
+final class APIManagerTest: XCTestCase {
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -17,48 +17,55 @@ final class APITest: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    func testAPIInit() {
-        let apiManager = API.shared
+    
+    func testAPIManagerInit() {
+        let apiManager = APIManager.shared()
         XCTAssertNotNil(apiManager)
     }
-    func testFetchArticlesSuccess() {
-        var response: [Article]?
-        var errorInfo: ErrorInfo?
+    
+    func testAPIManager_CallAPISuccess() {
+        var response: ArticleNetworkModel?
+        var errResponse: ErrorInfo?
+        let params = ["api-key" : Secrets.nytAPIKey]
         let expectation = self.expectation(description: "API fetched")
-        API.shared.fetchArticles(numberOfDays: 1) { result in
+        APIManager.shared().call(type: EndPointItem.viewed(1), params: params) { (result: Swift.Result<ArticleNetworkModel, ErrorInfo>) in
             switch result {
             case .success(let data):
                 response = data
                 expectation.fulfill()
             case .failure(let error):
-                errorInfo = error
+                errResponse = error
                 expectation.fulfill()
-                
             }
         }
         wait(for: [expectation], timeout: 60)
-        XCTAssertNotNil(response)
-        XCTAssertNil(errorInfo)
+        XCTAssertNotNil(response?.status)
+        XCTAssertNil(errResponse?.body)
     }
-
-    func testFetchArticlesFailure() {
-        var response: [Article]?
-        var errorInfo: ErrorInfo?
+    
+    func testAPIManager_CallAPIFailure() {
+        var response: ArticleNetworkModel?
+        var errResponse: ErrorInfo?
+        let params = ["api-key" : "abc"]
         let expectation = self.expectation(description: "API fetched")
-        API.shared.fetchArticles(numberOfDays: -1) { result in
+        APIManager.shared().call(type: EndPointItem.viewed(1), params: params) { (result: Swift.Result<ArticleNetworkModel, ErrorInfo>) in
             switch result {
             case .success(let data):
                 response = data
                 expectation.fulfill()
             case .failure(let error):
-                errorInfo = error
+                errResponse = error
                 expectation.fulfill()
-                
             }
         }
         wait(for: [expectation], timeout: 60)
-        XCTAssertNil(response)
-        XCTAssertNotNil(errorInfo)
+        XCTAssertNil(response?.status)
+        XCTAssertNotNil(errResponse?.body)
+    }
+    
+    func testErrorParseWhenNoData() {
+        let errorInfo = APIManager.shared().parseApiError()
+        XCTAssertNil(errorInfo)
     }
 
 }

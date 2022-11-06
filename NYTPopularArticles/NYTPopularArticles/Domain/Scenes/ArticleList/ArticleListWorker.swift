@@ -15,7 +15,8 @@ import UIKit
 class ArticleListWorker
 {
     func fetchArticles(numberOfDays: Int, completion: @escaping (Result<[Article]?, ErrorInfo>)->()) {
-        let params = ["api-key" : nytAPIKey]
+        
+        let params = ["api-key" : Secrets.nytAPIKey]
         APIManager.shared().call(type: EndPointItem.viewed(numberOfDays), params: params) { (result: Swift.Result<ArticleNetworkModel, ErrorInfo>) in
             switch result {
             case .success(let response):

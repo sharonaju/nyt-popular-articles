@@ -14,7 +14,6 @@ import UIKit
 
 @objc protocol ArticleDetailRoutingLogic
 {
-//  func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
 protocol ArticleDetailDataPassing

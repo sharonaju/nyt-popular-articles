@@ -25,7 +25,7 @@ class ArticleListPresenter: ArticleListPresentationLogic
   
   func presentArticleList(response: ArticleList.FetchArticleList.Response)
     {
-        let viewModel = ArticleList.FetchArticleList.ViewModel(articles: response.articles)
+        let viewModel = ArticleList.FetchArticleList.ViewModel(articles: response.articles, error: response.error)
         viewController?.displayArticleList(viewModel: viewModel)
     }
 }

@@ -38,10 +38,12 @@ class ArticleListInteractor: ArticleListBusinessLogic, ArticleListDataStore
             switch result {
             case .success(let data):
                 self.articles = data
-                let response = ArticleList.FetchArticleList.Response(articles: self.articles)
+                let response = ArticleList.FetchArticleList.Response(articles: self.articles, error: nil)
                 self.presenter?.presentArticleList(response: response)
                 completion (.success(data))
             case .failure(let error):
+                let response = ArticleList.FetchArticleList.Response(articles: nil, error: error)
+                self.presenter?.presentArticleList(response: response)
                 completion (.failure(error))
             }
         })

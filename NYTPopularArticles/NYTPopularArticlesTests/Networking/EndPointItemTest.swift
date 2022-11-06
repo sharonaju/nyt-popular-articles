@@ -25,12 +25,6 @@ final class EndPointItemTest: XCTestCase {
         let baseURL = sut.baseURL
         XCTAssertEqual(baseURL, "http://api.nytimes.com/svc/mostpopular/")
     }
-    
-//    func testHeaders() {
-//        let headers = sut.headers
-//        XCTAssertEqual(headers?["Content-Type"], "application/json")
-//        XCTAssertEqual(headers?["X-Requested-With"], "XMLHttpRequest")
-//    }
 
     func testPath() {
         let path = sut.path

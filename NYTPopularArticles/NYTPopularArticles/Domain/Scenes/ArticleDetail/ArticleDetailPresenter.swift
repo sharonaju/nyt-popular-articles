@@ -14,16 +14,16 @@ import UIKit
 
 protocol ArticleDetailPresentationLogic
 {
-  func presentSelectedArticel(response: ArticleDetail.ArticleItem.Response)
+  func presentSelectedArticle(response: ArticleDetail.ArticleItem.Response)
 }
 
 class ArticleDetailPresenter: ArticleDetailPresentationLogic
 {
   weak var viewController: ArticleDetailDisplayLogic?
   
-  // MARK: Do something
+    // MARK: Present Selected Article
   
-  func presentSelectedArticel(response: ArticleDetail.ArticleItem.Response)
+  func presentSelectedArticle(response: ArticleDetail.ArticleItem.Response)
   {
       let viewModel = ArticleDetail.ArticleItem.ViewModel(article: response.article)
     viewController?.displayArticle(viewModel: viewModel)

@@ -178,5 +178,53 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B503AD91-E377-450A-9AAB-A19E15F9AE5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NYTPopularArticlesTests/Scenes/ArticleDetail/ArticleDetailViewControllerTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "testShouldConfigureTableViewCellToDisplayOrder()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B503AD91-E377-450A-9AAB-A19E15F9AE5C - e9cd4df265d78fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NYTPopularArticlesTests.ArticleDetailViewControllerTest.testShouldConfigureTableViewCellToDisplayOrder() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/Scenes/ArticleDetail/ArticleDetailViewControllerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2524">
+               </Location>
+               <Location
+                  uuid = "B503AD91-E377-450A-9AAB-A19E15F9AE5C - e9cd4df265d78fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NYTPopularArticlesTests.ArticleDetailViewControllerTest.testShouldConfigureTableViewCellToDisplayOrder() -&gt; ()"
+                  moduleName = "NYTPopularArticlesTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sharonvarghese/Documents/Projects/NYTPopularArticles/NYTPopularArticles/NYTPopularArticlesTests/Scenes/ArticleDetail/ArticleDetailViewControllerTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "2614">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

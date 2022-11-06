@@ -21,57 +21,57 @@ class ArticleDetailViewController: UIViewController, ArticleDetailDisplayLogic
 {
     
     
-  var interactor: ArticleDetailBusinessLogic?
-  var router: (NSObjectProtocol & ArticleDetailRoutingLogic & ArticleDetailDataPassing)?
+    var interactor: ArticleDetailBusinessLogic?
+    var router: (NSObjectProtocol & ArticleDetailRoutingLogic & ArticleDetailDataPassing)?
     @IBOutlet var tableView: UITableView!
     var artilce: Article?
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = ArticleDetailInteractor()
-    let presenter = ArticleDetailPresenter()
-    let router = ArticleDetailRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-      prepareNavigationBar()
-      prepareTableView()
-      showArticle()
-  }
-  
-  // MARK: Set up Views
-  
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = ArticleDetailInteractor()
+        let presenter = ArticleDetailPresenter()
+        let router = ArticleDetailRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        prepareNavigationBar()
+        prepareTableView()
+        showArticle()
+    }
+    
+    // MARK: Set up Views
+    
     func prepareNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
     }
-  
+    
     func prepareTableView()  {
         tableView.register(UINib(nibName: "ArticleDetailTitleTableViewCell", bundle: nil), forCellReuseIdentifier: ArticleDetailTitleTableViewCell.reuseIdentifier)
         tableView.register(UINib(nibName: "ArticleDetailImageTableViewCell", bundle: nil), forCellReuseIdentifier: ArticleDetailImageTableViewCell.reuseIdentifier)
@@ -79,17 +79,18 @@ class ArticleDetailViewController: UIViewController, ArticleDetailDisplayLogic
         tableView.register(UINib(nibName: "ArticleDetailDescriptionTableViewCell", bundle: nil), forCellReuseIdentifier: ArticleDetailDescriptionTableViewCell.reuseIdentifier)
         tableView.estimatedRowHeight = 150
     }
-  
-  func showArticle()
-  {
-    interactor?.showSelectedArticle()
-  }
-  
+    
+    func showArticle()
+    {
+        interactor?.showSelectedArticle()
+    }
+    
     func displayArticle(viewModel: ArticleDetail.ArticleItem.ViewModel) {
         artilce = viewModel.article
         tableView.reloadData()
     }
 }
+// MARK: UITableViewDataSource
 
 extension ArticleDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -122,6 +123,7 @@ extension ArticleDetailViewController: UITableViewDataSource {
     }
     
 }
+// MARK: UITableViewDelegate
 
 extension ArticleDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

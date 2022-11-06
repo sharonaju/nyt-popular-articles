@@ -25,10 +25,12 @@ enum ArticleList
     struct Response
     {
         let articles: [Article]?
+        let error: ErrorInfo?
     }
     struct ViewModel
     {
         let articles: [Article]?
+        let error: ErrorInfo?
     }
   }
 }

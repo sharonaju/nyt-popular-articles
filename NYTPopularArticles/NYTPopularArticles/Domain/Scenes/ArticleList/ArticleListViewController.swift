@@ -130,10 +130,13 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
     
     func displayArticleList(viewModel: ArticleList.FetchArticleList.ViewModel)
     {
-        articles = viewModel.articles
-        DispatchQueue.main.async {
+        if let articles = viewModel.articles {
+            self.articles = articles
             self.tableView.reloadData()
+        } else {
+            print("Error \(viewModel.error?.body ?? "")")
         }
+        
     }
 }
 
