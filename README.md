@@ -6,7 +6,7 @@ NYT Popular Articles is an iOS application built in Swift to list the most popul
 
 ## Features
 - Lists the Most popular articles
-- A a period of 1 Day, 7 Days and 30 Days can be selected.
+- Period of 1 Day, 7 Days and 30 Days can be selected.
 - Navigates to  article detail
 
 ## Getting Started
