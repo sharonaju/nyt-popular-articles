@@ -2,6 +2,8 @@
 
 NYT Popular Articles is an iOS application built in Swift to list the most popular articles in New York Times.
 
+![nyt-popular-articles_MP4_AdobeExpress](https://user-images.githubusercontent.com/11748817/200318355-7a01f436-e75e-4389-ae29-d2cbdd5297f3.gif)
+
 ## Features
 - Lists the Most popular articles
 - A a period of 1 Day, 7 Days and 30 Days can be selected.
@@ -42,8 +44,5 @@ VIP Clean Architecture
 - iPhone X
 - iOS Simulator
 
-
-
-https://user-images.githubusercontent.com/11748817/200306248-f2f1fe9a-86fa-4b7f-a309-6440cc61465e.MP4
 
 
