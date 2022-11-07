@@ -50,7 +50,7 @@ final class ArticleListPresentorTest: XCTestCase {
 
 }
 // MARK: TestDoubles
-class ArticleListViewControllerSpy: ArticleListDisplayLogic {
+class ArticleListViewControllerSpy: UIViewController,ArticleListDisplayLogic {
     var displayArticleListCalled = false
     
     func displayArticleList(viewModel: NYTPopularArticles.ArticleList.FetchArticleList.ViewModel) {

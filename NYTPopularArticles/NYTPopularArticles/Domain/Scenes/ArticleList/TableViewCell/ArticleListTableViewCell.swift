@@ -35,12 +35,26 @@ class ArticleListTableViewCell: UITableViewCell {
             thumbnailImageView.sd_setImage(with: imageURL)
         }
         descriptionLabel.text = data?.abstract ?? ""
-        dateLabel.text = data?.updated ?? ""
+        dateLabel.text = getDate(date: data?.updated ?? "")
         
     }
     
     func prepareCell() {
         thumbnailImageView.layer.cornerRadius = 5
         thumbnailImageView.backgroundColor = UIColor.gray
+    }
+    
+    func getDate(date: String) -> String{
+        var dateStr = ""
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "EEE, dd MMM,yyyy"
+
+        if let date = dateFormatterGet.date(from: date) {
+            dateStr = dateFormatterPrint.string(from: date)
+        }
+        return dateStr
     }
 }

@@ -74,13 +74,13 @@ final class ArticleDetailViewControllerTest: XCTestCase {
          as! ArticleDetailDateTableViewCell
         // Then
         XCTAssertEqual(cell2.dateString, "2022-11-03 14:41:34")
-        XCTAssertEqual(cell2.byText, "By Kim Severson and Julia Moskin")
+        XCTAssertEqual(cell2.byLabel.text, "By Kim Severson and Julia Moskin")
         // When
         let indexPath3 = IndexPath(row: 3, section: 0)
         let cell3 = sut.tableView(tableView!, cellForRowAt: indexPath3)
          as! ArticleDetailDescriptionTableViewCell
         // Then
-        XCTAssertEqual(cell3.data, "She attempted to cook every recipe in a classic Julia Child cookbook and documented the effort in a popular blog that became a best-selling book and a hit movie.")
+        XCTAssertEqual(cell3.descriptionLabel.text, "She attempted to cook every recipe in a classic Julia Child cookbook and documented the effort in a popular blog that became a best-selling book and a hit movie.")
     }
     
     override func tearDownWithError() throws {

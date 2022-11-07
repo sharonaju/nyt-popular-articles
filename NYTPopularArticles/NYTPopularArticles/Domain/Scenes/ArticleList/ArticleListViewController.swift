@@ -84,6 +84,7 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
     // MARK: Prepare UI
       
     func prepareTableView()  {
+        tableView.accessibilityIdentifier = "ArticleListTableView"
         tableView.register(UINib(nibName: "ArticleListTableViewCell", bundle: nil), forCellReuseIdentifier: ArticleListTableViewCell.reuseIdentifier)
         tableView.estimatedRowHeight = 150
     }

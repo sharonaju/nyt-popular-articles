@@ -137,6 +137,15 @@ class ArticleListInteractorSpy: ArticleListBusinessLogic, ArticleListDataStore {
         fetchArticlesCalled = true
         
     }
+}
+
+class ArticleListDisplayLogicSpy: ArticleListDisplayLogic {
+    var displayArticleListCalled = false
+    var displayArticleViewModel: ArticleList.FetchArticleList.ViewModel?
+    func displayArticleList(viewModel: NYTPopularArticles.ArticleList.FetchArticleList.ViewModel) {
+        displayArticleListCalled = true
+        displayArticleViewModel = viewModel
+    }
     
     
 }

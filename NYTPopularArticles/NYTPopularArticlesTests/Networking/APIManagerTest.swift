@@ -38,7 +38,7 @@ final class APIManagerTest: XCTestCase {
                 expectation.fulfill()
             }
         }
-        wait(for: [expectation], timeout: 60)
+        wait(for: [expectation], timeout: 30)
         XCTAssertNotNil(response?.status)
         XCTAssertNil(errResponse?.body)
     }
@@ -58,7 +58,7 @@ final class APIManagerTest: XCTestCase {
                 expectation.fulfill()
             }
         }
-        wait(for: [expectation], timeout: 60)
+        wait(for: [expectation], timeout: 30)
         XCTAssertNil(response?.status)
         XCTAssertNotNil(errResponse?.body)
     }

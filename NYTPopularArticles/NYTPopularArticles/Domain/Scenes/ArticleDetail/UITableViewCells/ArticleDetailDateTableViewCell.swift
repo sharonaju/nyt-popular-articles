@@ -28,9 +28,23 @@ class ArticleDetailDateTableViewCell: UITableViewCell {
     }
 
     func assignDate() {
-        dateLabel.text = dateString ?? ""
+        dateLabel.text = getDate(date: dateString ?? "")
     }
     func assignByLabel() {
         byLabel.text = byText ?? ""
     }
+    func getDate(date: String) -> String{
+        var dateStr = ""
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "EEE, dd MMM,yyyy"
+
+        if let date = dateFormatterGet.date(from: date) {
+            dateStr = dateFormatterPrint.string(from: date)
+        }
+        return dateStr
+    }
+
 }
