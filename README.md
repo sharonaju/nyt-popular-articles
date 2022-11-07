@@ -40,3 +40,10 @@ VIP Clean Architecture
 - XCode 14.1
 - iOS 16
 - iPhone X
+- iOS Simulator
+
+
+
+https://user-images.githubusercontent.com/11748817/200306248-f2f1fe9a-86fa-4b7f-a309-6440cc61465e.MP4
+
+
