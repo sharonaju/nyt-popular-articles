@@ -11,11 +11,11 @@ NYT Popular Articles is an iOS application built in Swift to list the most popul
 
 ## Getting Started
 1. Clone the repo
-2. to the project directory
+2. Go to the project directory
 3. Run pod install
 
 ## Architecture
-VIP Clean Architecture
+Clean Architecture
 
 ## Templates Used
 - [Clean Swift](https://clean-swift.com/)
