@@ -25,7 +25,6 @@ final class NYTPopularArticlesUITests: XCTestCase {
     func testSegmentedControl() {
         let app = XCUIApplication()
         app.launch()
-        let segmentedControl = app.segmentedControls
         XCTAssertTrue(app.segmentedControls.buttons["1 Day"].exists)
         XCTAssertTrue(app.segmentedControls.buttons["7 Days"].exists)
         XCTAssertTrue(app.segmentedControls.buttons["30 Days"].exists)

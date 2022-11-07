@@ -94,7 +94,7 @@ class ArticleListViewController: UIViewController, ArticleListDisplayLogic
         navigationController?.navigationBar.prefersLargeTitles = true
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .black
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont(name: "TimesNewRomanPS-BoldMT", size: 36)!]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont(name: "TimesNewRomanPS-BoldMT", size: 34)!]
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance

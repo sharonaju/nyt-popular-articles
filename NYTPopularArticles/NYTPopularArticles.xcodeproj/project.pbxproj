@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,6 @@
 		2364FC6C29183F9A00B32145 /* ArticleListPresentorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364FC6B29183F9A00B32145 /* ArticleListPresentorTest.swift */; };
 		236690A92918DCCA00AAC834 /* NYTPopularArticlesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236690A82918DCCA00AAC834 /* NYTPopularArticlesUITests.swift */; };
 		236690AB2918DCCA00AAC834 /* NYTPopularArticlesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236690AA2918DCCA00AAC834 /* NYTPopularArticlesUITestsLaunchTests.swift */; };
-		236690B2291903C900AAC834 /* ArticleListRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236690B1291903C800AAC834 /* ArticleListRouterTest.swift */; };
 		23971DCF291661F200D52A3A /* ArticleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23971DC9291661F200D52A3A /* ArticleListPresenter.swift */; };
 		23971DD0291661F200D52A3A /* ArticleListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23971DCA291661F200D52A3A /* ArticleListWorker.swift */; };
 		23971DD1291661F200D52A3A /* ArticleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23971DCB291661F200D52A3A /* ArticleListRouter.swift */; };
@@ -89,7 +88,6 @@
 		236690A62918DCCA00AAC834 /* NYTPopularArticlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTPopularArticlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		236690A82918DCCA00AAC834 /* NYTPopularArticlesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTPopularArticlesUITests.swift; sourceTree = "<group>"; };
 		236690AA2918DCCA00AAC834 /* NYTPopularArticlesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTPopularArticlesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		236690B1291903C800AAC834 /* ArticleListRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouterTest.swift; sourceTree = "<group>"; };
 		23971DC9291661F200D52A3A /* ArticleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListPresenter.swift; sourceTree = "<group>"; };
 		23971DCA291661F200D52A3A /* ArticleListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListWorker.swift; sourceTree = "<group>"; };
 		23971DCB291661F200D52A3A /* ArticleListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouter.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 				2364FC5A2917E40400B32145 /* ArticleListViewControllerTest.swift */,
 				2364FC612917EAD900B32145 /* ArticleListInteractorTest.swift */,
 				2364FC6B29183F9A00B32145 /* ArticleListPresentorTest.swift */,
-				236690B1291903C800AAC834 /* ArticleListRouterTest.swift */,
 			);
 			path = ArticleList;
 			sourceTree = "<group>";
@@ -473,7 +470,7 @@
 				};
 			};
 			buildConfigurationList = 23ECCB38291507280082CF6F /* Build configuration list for PBXProject "NYTPopularArticles" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -642,7 +639,6 @@
 				23038FEF2915B8E2006E26C0 /* EndPointItemTest.swift in Sources */,
 				2364FC65291825FB00B32145 /* ArticleDetailViewControllerTest.swift in Sources */,
 				2364FC6C29183F9A00B32145 /* ArticleListPresentorTest.swift in Sources */,
-				236690B2291903C900AAC834 /* ArticleListRouterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
