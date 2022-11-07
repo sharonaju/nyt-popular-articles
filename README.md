@@ -35,7 +35,7 @@ VIP Clean Architecture
 3. The application will get build and the test cases will be executed
 4. Press the on the "Show the Report Navigator" button in Xcode
 5. Select the latest test 
-6. Choose Code coverage
+6. Choose Code coverage(81.3%)
 
 ## Tools Used
 - macOS Monterey Version 12.5
